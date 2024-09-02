@@ -34,7 +34,7 @@ jobs:
         run: dotnet restore ./dotnetgirls_site/dotnetgirls_site.csproj
 
       - name: Build the Blazor WebAssembly app
-        run: dotnet publish ./dotnetgirls_site/dotnetgirls_site.csproj --configuration Release --output ./dotnetgirls_site/wwwroot
+        run: dotnet publish ./dotnetgirls_site/dotnetgirls_site.csproj --configuration Release --output ./dotnetgirls_site/bin/Release/net8.0/publish
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
@@ -42,16 +42,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dotnetgirls_site/wwwroot'  # Path to the directory containing the built app
+          path: './dotnetgirls_site/bin/Release/net8.0/publish/wwwroot'  # Correct path to the built app
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
         with:
-          # Replace 'gh-pages' with your branch if it's different
           branch: gh-pages
-          folder: ./dotnetgirls_site/wwwroot
+          folder: './dotnetgirls_site/bin/Release/net8.0/publish/wwwroot'
 
     environment:
       name: github-pages
