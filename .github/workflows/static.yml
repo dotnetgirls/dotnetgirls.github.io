@@ -32,7 +32,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Prepare Blazor WASM for GitHub Pages
-        uses: dotnetgirls/dotnetgirls.github.io@v2  # This action prepares the Blazor WASM app for GitHub Pages
+        uses: dotnetgirls/dotnetgirls.github.io@v1  # This action prepares the Blazor WASM app for GitHub Pages
         id: prepare  # This ID is used to reference the outputs of this step in later steps
         with:
           project-path: ./dotnetgirls_site/dotnetgirls_site.csproj
