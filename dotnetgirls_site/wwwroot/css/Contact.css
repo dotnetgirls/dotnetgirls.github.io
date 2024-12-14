@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Soljik';
-    src: url('/fonts/Soljik-Dambaek.ttf') format('truetype');
-}
-
-
 #contact {
     padding-top: 200px;
     padding-bottom: 50px;
@@ -13,11 +7,10 @@
     text-align: center; /* 텍스트 가운데 정렬 */
 }
 #contact h1 {
-    font-family: 'Soljik';
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-style: bold;
     margin-top: 40px; 
-    font-size: 80px;
+    font-size: 3rem;
 }
 
 #contact h1 a{
